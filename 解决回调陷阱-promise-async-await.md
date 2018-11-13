@@ -35,7 +35,8 @@ asyncFunc1(opt, (...args1) => {
 > 什么❓兼容性❓ 不存在的！把babel这个库用起来！
 
 
-
+### 实例
+[promise-async-await.js](../sources/promise-async-await.js)
 
 
 ### 总结
