@@ -34,9 +34,33 @@ asyncFunc1(opt, (...args1) => {
 
 > 什么❓兼容性❓ 不存在的！把babel这个库用起来！
 
+### 用法示例
 
-### 实例
-[promise-async-await.js](../sources/promise-async-await.js)
+```js
+
+'use strict'
+
+async function timeOut(ms) {
+    console.log('开始调用了 timeout...')
+    await new Promise((resolve,reject) =>{
+        setTimeout(() => {
+            resolve();
+        }, ms);
+    })
+
+}
+async function asyncPrint(time,str){
+    console.log(`start imedetely ...`);
+    await timeOut(time);
+    console.log(str)
+}
+asyncPrint(5000,'submit cancel!')
+
+```
+
+### 思路解析
+[promise-async-await.js](../src/promise-async-await.js)
+
 
 
 ### 总结
